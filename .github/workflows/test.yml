@@ -36,6 +36,9 @@ jobs:
       - name: Build with Gradle Wrapper
         run: ./gradlew test --info
 
+      - name: Run Checkstyle
+        run: ./gradlew checkstyleMain checkstyleTest
+
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
