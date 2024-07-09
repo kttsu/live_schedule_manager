@@ -37,7 +37,14 @@ jobs:
         run: ./gradlew test --info
 
       - name: Run Checkstyle
-        run: ./gradlew checkstyleMain checkstyleTest
+        uses: nikitasavinov/checkstyle-action@master
+        if: always()
+        with:
+          reporter: 'github-pr-check'
+          tool_name: 'reviewdog'
+          checkstyle_config: 'config/checkstyle/checkstyle.xml'
+          workdir: 'src/main'
+          level: warning
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
