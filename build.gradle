@@ -33,7 +33,7 @@ tasks.named('test') {
 }
 
 checkstyle {
-    toolVersion = '10.7' 
+    toolVersion = '10.8' 
     configFile = file('config/checkstyle/checkstyle.xml')
 }
 
