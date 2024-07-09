@@ -60,3 +60,17 @@ tasks.jacocoTestReport {
         html.outputLocation = file("$buildDir/reports/jacoco")
     }
 }
+
+task checkstyleMain(type: Checkstyle) {
+    configFile = file('config/checkstyle/checkstyle.xml')
+    source 'src/main/java'
+    include '**/*.java'
+    classpath = sourceSets.main.compileClasspath
+}
+
+task checkstyleTest(type: Checkstyle) {
+    configFile = file('config/checkstyle/checkstyle.xml')
+    source 'src/test/java'
+    include '**/*.java'
+    classpath = sourceSets.test.compileClasspath
+}
