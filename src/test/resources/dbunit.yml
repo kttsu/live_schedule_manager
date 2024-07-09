@@ -1,0 +1,10 @@
+cacheConnection: false
+cacheTableNames: false
+properties:
+  schema: live_database
+caseInsensitiveStrategy: LOWERCASE
+connectionConfig:
+  url: "jdbc:mysql://localhost:3307/live_database"
+  user: "tsuchiya"
+  password: "password"
+

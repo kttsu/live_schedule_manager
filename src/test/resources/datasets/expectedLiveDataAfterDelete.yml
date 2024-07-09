@@ -1,0 +1,13 @@
+live:
+  - id: 2
+    schedule: "2024-06-06 19:00:00"
+    name: "PRAYING MANTIS"
+    location: "梅田Club Quattro"
+  - id: 3
+    schedule: "2024-09-24 19:00:00"
+    name: "IRON MAIDEN"
+    location: "大阪城ホール"
+  - id: 4
+    schedule: "2024-10-19 18:00:00"
+    name: "JOURNEY"
+    location: "Asueアリーナ大阪"
