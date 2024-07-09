@@ -28,5 +28,8 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
 
+dependencies {
+    implementation 'non.existent:library:1.0.0' 
 }
