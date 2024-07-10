@@ -36,6 +36,9 @@ jobs:
       - name: Build with Gradle Wrapper
         run: ./gradlew test --info
 
+      - name: Verify Checkstyle Config File
+        run: ls config/checkstyle/checkstyle.xml
+
       - name: Run Checkstyle
         run: ./gradlew checkstyleMain checkstyleTest
 
