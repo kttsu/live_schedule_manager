@@ -36,11 +36,11 @@ jobs:
       - name: Build with Gradle Wrapper
         run: ./gradlew test --info
 
-      - name: Download Checkstyle
-        run: curl -LJO https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.3/checkstyle-10.12.3-all.jar
+      - name: Run Checkstyle for main code
+        run: ./gradlew runCheckstyle --info
 
-      - name: Run Checkstyle
-        run: java -jar checkstyle-10.12.3-all.jar -c config/checkstyle/checkstyle.xml src/main/java
+      - name: Run Checkstyle for test code
+        run: ./gradlew runCheckstyleTest --info
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
