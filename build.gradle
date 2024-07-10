@@ -61,16 +61,10 @@ tasks.jacocoTestReport {
     }
 }
 
-task checkstyleMain(type: Checkstyle) {
-    configFile = file('config/checkstyle/checkstyle.xml')
-    source 'src/main/java'
-    include '**/*.java'
-    classpath = sourceSets.main.compileClasspath
+task runCheckstyle(type: Exec) {
+    commandLine 'java', '-jar', 'path/to/checkstyle-10.12.3-all.jar', '-c', 'config/checkstyle/checkstyle.xml', 'src/main/java'
 }
 
-task checkstyleTest(type: Checkstyle) {
-    configFile = file('config/checkstyle/checkstyle.xml')
-    source 'src/test/java'
-    include '**/*.java'
-    classpath = sourceSets.test.compileClasspath
+task runCheckstyleTest(type: Exec) {
+    commandLine 'java', '-jar', 'path/to/checkstyle-10.12.3-all.jar', '-c', 'config/checkstyle/checkstyle.xml', 'src/test/java'
 }
