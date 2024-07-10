@@ -35,7 +35,7 @@ tasks.named('test') {
 
 checkstyle {
     toolVersion = '10.12.3' 
-    configFile = file('config/checkstyle/checkstyle.xml')
+    configFile = file('live_schedule_manager/config/checkstyle/checkstyle.xml')
 }
 
 tasks.withType(Checkstyle) {
