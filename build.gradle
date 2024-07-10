@@ -60,11 +60,3 @@ tasks.jacocoTestReport {
         html.outputLocation = file("$buildDir/reports/jacoco")
     }
 }
-
-task runCheckstyle(type: Exec) {
-    commandLine 'java', '-jar', 'libs/checkstyle-10.12.3-all.jar', '-c', 'config/checkstyle/checkstyle.xml', 'src/main/java/com/tsuchiya/live'
-}
-
-task runCheckstyleTest(type: Exec) {
-    commandLine 'java', '-jar', 'libs/checkstyle-10.12.3-all.jar', '-c', 'config/checkstyle/checkstyle.xml', 'src/test/java/com/tsuchiya/live'
-}
