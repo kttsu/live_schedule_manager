@@ -1,11 +1,11 @@
 ## liveスケジュールアプリ
-RaiseTech 24年11月度 最終課題Spring Boot RestAPIのCRUDアプリケーション
+Spring Boot を使った、RestAPIのCRUDアプリケーション。
 
 ---
 ## 概要
 行きたいライブの日付を忘れないように管理しておけるCRUDアプリです。  
 READ・CREATE・UPDATE・DELETE機能を実装。  
-単体テスト、結合テストを実装し、GitHub ActionsでのCIも実装予定。
+単体テスト、結合テストを実装し、GitHub ActionsでのCIも実装。
 
 
 <details>
