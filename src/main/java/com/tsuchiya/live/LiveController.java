@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/live")
+@CrossOrigin(origins = "http://localhost:3000")
 public class LiveController {
     private final LiveService liveService;
 
