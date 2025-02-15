@@ -45,6 +45,9 @@
 
 ---
 
+<details>
+<summary><h2>バックエンドでのGitHub ActionsのCIテスト結果はこちら</h2></summary>
+
 ## CIテスト結果
 
 <details>
