@@ -16,13 +16,23 @@
 
 ---
 ## 構成要件
+#### フロントエンド
+* React 18
+* Node.js 22.13.1
+  
+#### バックエンド
 * Java 17
 * Spring Boot 3.2.4
-* MySQL 8.0
 * Docker 24.0.7 
 * JUnit 5.8.1
 * Mockito
   
+#### データベース
+* MySQL 8.0
+
+#### 使用ツール
+* Docker 27.2.0
+* GitHub Actions
 ---
 ## 機能一覧
 
