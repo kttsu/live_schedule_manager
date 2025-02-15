@@ -56,11 +56,13 @@ https://github.com/user-attachments/assets/9d8a7765-d4dd-40bb-bc56-65b617fe7f99
 ![Image](https://github.com/user-attachments/assets/0a6c8f2d-d2f3-4a0b-9b87-377e786acfd5)
 
 #### ライブ情報更新
-https://github.com/user-attachments/assets/679c8312-9b9e-42d2-9db7-44de1fac113b
+https://github.com/user-attachments/assets/492be25f-9f79-407e-88f9-9980e2b7a30a
 
 #### ライブ削除
-https://github.com/user-attachments/assets/e637f5d2-99b4-41a9-ae64-18c2c3aad1bd
+https://github.com/user-attachments/assets/a3e7ce9e-64ac-44af-95b8-7b30cf8fb784
 
+#### テキストフィールド未入力対策
+https://github.com/user-attachments/assets/16c53501-2e3a-4576-ac61-a68c3c2b31bf
 
 <details>
 <summary><h2>バックエンドでのGitHub ActionsのCIテスト結果はこちら</h2></summary>
