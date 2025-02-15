@@ -11,7 +11,7 @@ READ・CREATE・UPDATE・DELETE機能を実装。
 <details>
 <summary><h4>アプリケーション概要図</h4></summary>
 
-![Untitled - learning_task_10 (2)](https://github.com/kttsu/learning_task_10/assets/150462533/25c38833-684c-47a1-93cd-7b9e63662695)
+![Image](https://github.com/user-attachments/assets/62a4bcaf-bbbd-4070-92f6-90eb5508bd59)
 </details>
 
 ---
