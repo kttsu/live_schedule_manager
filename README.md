@@ -37,33 +37,6 @@
 
 ---
 
-## ライブスケジュール管理機能一覧
-
-| 機能 | 詳細 | 
-| ------------ | ------------- | 
-| ライブ登録（Create） | 日時、ライブ名、会場を登録可能。日付順に登録可能で、完了後に「ライブを作成しました！」とメッセージ表示。 | 
-| ライブ一覧表示（Read） | 登録されたライブが日時順で表示し、UIはわかりやすいリスト形式で表示。| 
-| ライブ情報更新（Update） | 登録済みのライブを選択し、日時・名称・会場を変更可能。同じ内容を再度登録しようとすると「前回と同じ情報です！」と表示。 | 
-| ライブ削除（Delete） | 削除時には「本当に削除しますか？」という確認ダイアログを表示。「はい」選択で削除、「いいえ」選択でキャンセル。 | 
-
----
-
-## 動作確認
-#### ライブ登録
-https://github.com/user-attachments/assets/9d8a7765-d4dd-40bb-bc56-65b617fe7f99
-
-#### ライブ一覧表示
-![Image](https://github.com/user-attachments/assets/0a6c8f2d-d2f3-4a0b-9b87-377e786acfd5)
-
-#### ライブ情報更新
-https://github.com/user-attachments/assets/492be25f-9f79-407e-88f9-9980e2b7a30a
-
-#### ライブ削除
-https://github.com/user-attachments/assets/a3e7ce9e-64ac-44af-95b8-7b30cf8fb784
-
-#### テキストフィールド未入力対策
-https://github.com/user-attachments/assets/16c53501-2e3a-4576-ac61-a68c3c2b31bf
-
 <details>
 <summary><h2>バックエンドでのGitHub ActionsのCIテスト結果はこちら</h2></summary>
 
@@ -210,3 +183,47 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 
 
 </details>
+</details>
+
+---
+
+## ライブスケジュール管理機能一覧
+
+| 機能 | 詳細 | 
+| ------------ | ------------- | 
+| ライブ登録（Create） | 日時、ライブ名、会場を登録可能。日付順に登録可能で、完了後に「ライブを作成しました！」とメッセージ表示。 | 
+| ライブ一覧表示（Read） | 登録されたライブが日時順で表示し、UIはわかりやすいリスト形式で表示。| 
+| ライブ情報更新（Update） | 登録済みのライブを選択し、日時・名称・会場を変更可能。同じ内容を再度登録しようとすると「前回と同じ情報です！」と表示。 | 
+| ライブ削除（Delete） | 削除時には「本当に削除しますか？」という確認ダイアログを表示。「はい」選択で削除、「いいえ」選択でキャンセル。 | 
+
+---
+
+## 動作確認
+#### ライブ登録
+https://github.com/user-attachments/assets/9d8a7765-d4dd-40bb-bc56-65b617fe7f99
+
+#### ライブ一覧表示
+![Image](https://github.com/user-attachments/assets/0a6c8f2d-d2f3-4a0b-9b87-377e786acfd5)
+
+#### ライブ情報更新
+https://github.com/user-attachments/assets/492be25f-9f79-407e-88f9-9980e2b7a30a
+
+#### ライブ削除
+https://github.com/user-attachments/assets/a3e7ce9e-64ac-44af-95b8-7b30cf8fb784
+
+#### テキストフィールド未入力対策
+https://github.com/user-attachments/assets/16c53501-2e3a-4576-ac61-a68c3c2b31bf
+
+</details>
+
+---
+
+##  **力を入れたポイント**
+
+###  **フロントエンドとバックエンドの連携**
+- ReactとSpring BootのREST APIを連携し、ライブスケジュール管理機能を実装。  
+- フロントエンドから **API通信** によってデータを取得・操作可能。
+
+###  **日付順の自動ソート機能**
+- ライブ一覧が自動で **日付順に並び替えられるように改良。  
+- `useEffect` フックでデータ取得後にソート処理を実装。
