@@ -14,15 +14,12 @@ const CreateLive = () => {
     const newLive = { schedule, name, location };
     try {
       await createLive(newLive);
-      //  成功時にポップアップ表示
       window.alert("ライブを作成しました！");
-      //  １秒後に一覧ページへ遷移
       setTimeout(() => {
         navigate("/");
       }, 1000);
     } catch (error) {
       console.error("作成エラー:", error);
-      //  失敗時にアラート表示
       window.alert("作成に失敗しました。");
     }
   };
