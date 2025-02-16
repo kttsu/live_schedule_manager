@@ -99,67 +99,60 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 
 ---
 
-③ [Checkstyleを修正。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/567664a5d795d517f5d84b135b74ef780f5007d2)
-
 <details>
-<summary><h4>エラー内容</h4></summary>
-<h4>・Build With Gradle Wrapper</h4>
+<summary><h4>③ Checkstyle実行時のパスエラー </h4></summary>
+<h4>・エラー内容</h4>
 <h4>checkstyleMain というタスクがすでに存在しているにもかかわらず、同じ名前のタスクを再度追加しようとしたために発生。</h4>
 
 ![スクリーンショット (274)](https://github.com/user-attachments/assets/953ea4ec-58dd-4170-ad06-e4151f7d1ce7)
 
-<h4>・Run Checkstyle</h4>
 <h4>checkstyle設定ファイルで、TreeWalkerはLineLengthの親モジュールとして使用できないのに、TreeWalkerモジュールの下にLineLengthモジュールを配置しようとしたために発生。</h4>
 
 ![スクリーンショット (275)](https://github.com/user-attachments/assets/736d3cf3-3ba3-4791-809d-7b9ba7047cea)
 
+### コミットリンク
+- [Checkstyleを修正。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/567664a5d795d517f5d84b135b74ef780f5007d2)
+
 </details>
 
 ---
 
-④ [java -jar でCheckstyleを実行.](https://github.com/kttsu/live_schedule_manager/pull/1/commits/6bfca42f918a8e5bb35c4270ed61de26182da9d5)
-
 <details>
-<summary><h4>エラー内容</h4></summary>
-<h4>・Build With Gradle Wrapper</h4>
-
+<summary><h4>④ checkstyleMainタスクの重複定義が原因</h4></summary>
+<h4>・エラー内容</h4>
 <h4>build.gradleファイルの64行目で、すでに存在しているタスク checkstyleMain を再度追加しようとしたために発生。</h4>
 
 ![スクリーンショット (276)](https://github.com/user-attachments/assets/8e7775bb-3265-4149-9e12-61af5e3eb19e)
 
+### コミットリンク
+- [java -jar でCheckstyleを実行.](https://github.com/kttsu/live_schedule_manager/pull/1/commits/6bfca42f918a8e5bb35c4270ed61de26182da9d5)
+  
 </details>
 
 ---
 
-⑤ [build.gradle のカスタムタスクを実行するように修正。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/60ffbdb59e0c299ae070eb9f0dbcf8638b50081d)
-
 <details>
-<summary><h4>エラー内容</h4></summary>
-<h4>・Run Checkstyle for main code</h4>
+<summary><h4>⑤ runCheckstyle タスクがコードスタイル違反で失敗。</h4></summary>
+<h4>・エラー内容</h4>
 <h4>Gradleで実行した runCheckstyle というタスクが失敗したことを示しており、java コマンドを使ってCheckstyleを実行しようとしたが、Checkstyleによって検出されたコードスタイルに問題があるため、タスクが失敗。</h4>
 
 ![スクリーンショット (277)](https://github.com/user-attachments/assets/6428817a-5c32-4e7d-9768-3893bb2ab211)
 
+### コミットリンク
+- [build.gradle のカスタムタスクを実行するように修正。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/60ffbdb59e0c299ae070eb9f0dbcf8638b50081d)
+
+
 </details>
 
 ---
 
-⑥ [Checkstyle タスクを実行する処理を修正。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/a2566323968f19115eb1f5c8605f6763fc86d747) 　　　
-　
-　[Checkstyle設定ファイルを確認する処理を追加。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/d9bad554a4743a8417a0f78d79e4872204ee951e)
-　
-　[--info オプションを追加。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/5e362fb4aeb4333a76977f9e23ab23d297f2e59e)
-
 <details>
-<summary><h4>エラー内容とその修正内容</h4></summary>
+<summary><h4>⑥ Checkstyleの設定不備</h4></summary>
 <h4>・エラー内容 <h4>
-<h4>・Run Checkstyle</h4>
-<h4>1: Task failed with an exception.</h4>
 <h4>checkstyleMain タスクが失敗したことを示しており、特に、Checkstyleの設定ファイル checkstyle.xml を正しく読み込めなかったことが原因。パスが存在しないか、間違っている、XMLの構文や設定内容を確認する必要があります。</h4>
 
 ![スクリーンショット (280)](https://github.com/user-attachments/assets/918c1911-2ae8-4bf1-8a3c-e0a57c4885c6)
 
-<h4>2: Task failed with an exception.</h4>
 <h4>checkstyleTest タスクが失敗したことを示しており、特に、Checkstyleの設定ファイル checkstyle.xml を正しく読み込めなかったことが原因。パスが存在しないか、間違っている、XMLの構文や設定内容を確認する必要があります。</h4>
 
 ![スクリーンショット (281)](https://github.com/user-attachments/assets/a9057cc4-a78a-4c25-9e10-5009e017f502)
@@ -169,7 +162,11 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 
 ![スクリーンショット (283)](https://github.com/user-attachments/assets/7026504e-4dc4-42c6-8366-a2d7c5b9819d)
 
-
+### コミットリンク
+- [Checkstyle タスクを実行する処理を修正。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/a2566323968f19115eb1f5c8605f6763fc86d747) 　
+- [Checkstyle設定ファイルを確認する処理を追加。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/d9bad554a4743a8417a0f78d79e4872204ee951e)
+- [--info オプションを追加。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/5e362fb4aeb4333a76977f9e23ab23d297f2e59e)
+ 
 </details>
 </details>
 
