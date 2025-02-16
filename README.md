@@ -38,54 +38,36 @@
 
 ---
 
-<details>
-<summary><h2>バックエンドでのGitHub ActionsのCIテスト結果はこちら</h2></summary>
-
-## CIテスト結果
+## バックエンドでのGitHub ActionsのCIテスト結果はこちら
 
 <details>
-<summary><h3>①自動化テスト</h3></summary>
+<summary>CIテスト結果を見る</summary>
 
+### ① 自動化テスト
 ![スクリーンショット (256)](https://github.com/user-attachments/assets/cb979ed9-0bfc-43a6-8e57-3fee58c9f95f)
 
-</details>
-<details>
-<summary><h3>②codecov</h3></summary>
-
+### ② codecov
 ![スクリーンショット (255)](https://github.com/user-attachments/assets/3e7f1e3f-9b78-419a-ac25-63cd1684c2b4)
 
-</details>
-<details>
-<summary><h3>③checkstyle</h3></summary>
-
+### ③ checkstyle
 ![スクリーンショット (257)](https://github.com/user-attachments/assets/663ed345-d75b-429c-85d1-5f8c8f13c80c)
 
-</details>
-<details>
-<summary><h3>④discordへの通知</h3></summary>
-<h4>成功時<h4>
+### ④ Discordへの通知
+#### ・ 成功時
+  ![スクリーンショット (254)](https://github.com/user-attachments/assets/91a741b9-589e-404b-996c-23caf3f226a5)
 
-![スクリーンショット (254)](https://github.com/user-attachments/assets/91a741b9-589e-404b-996c-23caf3f226a5)
-
-<h4>失敗時<h4>
-
-![スクリーンショット (251)](https://github.com/user-attachments/assets/2f2a9197-2a9d-4704-8302-d3d869b44531)
+#### ・ 失敗時
+  ![スクリーンショット (251)](https://github.com/user-attachments/assets/2f2a9197-2a9d-4704-8302-d3d869b44531)
 
 </details>
 
-## 失敗結果
+## CIパイプラインでの失敗と修正内容
 CIパイプライン中に発生した失敗結果とテストに合格する際どのように修正を行ったかについて以下にまとめます。
 
-① [Create gradle.yml](https://github.com/kttsu/live_schedule_manager/pull/1/commits/ec9a6e1a86101ba8e679ac5c592916be21d141fd)　
-
-　[gradle.yml から test.yml に変更。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/7d5e14d27870ed324b8f9f74cca5130595bc4ba4)　
-　
-　[gradlew buildに変更。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/013ea34e22b81dc179dc37b715adfb7b1ddd7e19)
-
 <details>
-<summary><h4>エラー内容とその修正内容</h4></summary>
+<summary><h4>① gradle.ymlからtest.ymlへ変更</h4></summary>
 <h4>・エラー内容 <h4>
-<h4>・Build With Gradle Wrapper</h4><h4>
+
 <h4>gradlewファイルがWindowsの改行スタイル（CRLF）を使用していることが原因でエラーが発生。現在、Windows上でWSLを使用しているため、WSLはLinux環境として動作し、Unixスタイルの改行（LF）が必要。</h4>
 
 ![スクリーンショット (263)](https://github.com/user-attachments/assets/9e96c73c-9637-4ece-b30a-e89c46394652)
@@ -95,18 +77,23 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 
 ![スクリーンショット (264)](https://github.com/user-attachments/assets/bec4fda3-cced-483c-ad42-a152c8af885f)
 
+### コミットリンク
+- [Create gradle.yml](https://github.com/kttsu/live_schedule_manager/pull/1/commits/ec9a6e1a86101ba8e679ac5c592916be21d141fd)
+- [gradle.yml から test.yml に変更](https://github.com/kttsu/live_schedule_manager/pull/1/commits/7d5e14d27870ed324b8f9f74cca5130595bc4ba4)  
+- [gradlew build に変更](https://github.com/kttsu/live_schedule_manager/pull/1/commits/013ea34e22b81dc179dc37b715adfb7b1ddd7e19)
+
 </details>
 
 ---
 
-② [Checkstyleを追加。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/414418a4367c4ebf1db12dabe0a17285f77a1ab7)
-
 <details>
-<summary><h4>エラー内容</h4></summary>
-<h4>・Run Checkstyle</h4>
+<summary><h4>② Checkstyle設定ファイルの不具合修正</h4></summary>
+<h4>・エラー内容</h4>
 <h4>checkstyleMain および checkstyleTest というタスクが適切に設定されていないために発生。</h4>
 
 ![スクリーンショット (265)](https://github.com/user-attachments/assets/b9abd3b5-8676-4576-8b05-274ba8f23a0a)
+### コミットリンク
+- [Checkstyleを追加。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/414418a4367c4ebf1db12dabe0a17285f77a1ab7)
 
 </details>
 
