@@ -79,7 +79,7 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 ![スクリーンショット (263)](https://github.com/user-attachments/assets/9e96c73c-9637-4ece-b30a-e89c46394652)
 
 <h4>・修正内容<h4>
-<h4>gradlewファイルの改行コードをLFに変換するためのステップを追加。</h4>
+<h4>gradlewファイルの改行コードをLFに変換するためのステップを追加</h4>
 
 ![スクリーンショット (264)](https://github.com/user-attachments/assets/bec4fda3-cced-483c-ad42-a152c8af885f)
 
