@@ -38,7 +38,7 @@
 
 ---
 
-## バックエンドでのGitHub ActionsのCIテスト結果はこちら
+## バックエンドでのGitHub ActionsのCIテスト結果
 
 <details>
 <summary>CIテスト結果を見る</summary>
@@ -62,6 +62,12 @@
 </details>
 
 ## CIパイプラインでの失敗と修正内容
+
+<details>
+<summary>CIテストの失敗と修正内容を見る</summary>
+  
+<br>
+
 CIパイプライン中に発生した失敗結果とテストに合格する際どのように修正を行ったかについて以下にまとめます。
 
 <details>
@@ -141,7 +147,6 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 ### コミットリンク
 - [build.gradle のカスタムタスクを実行するように修正。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/60ffbdb59e0c299ae070eb9f0dbcf8638b50081d)
 
-
 </details>
 
 ---
@@ -168,7 +173,6 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 - [--info オプションを追加。](https://github.com/kttsu/live_schedule_manager/pull/1/commits/5e362fb4aeb4333a76977f9e23ab23d297f2e59e)
  
 </details>
-</details>
 
 ---
 
@@ -180,7 +184,6 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 | ライブ一覧（Read） 　　| 登録されたライブを日時順に表示し、UIは見やすいリスト形式で一覧化。 |
 | ライブ更新（Update） 　| 登録済みのライブを選択し、日時・名称・会場を変更可能。同じ内容で更新時は「前回と同じ情報です！」と表示。 |
 | ライブ削除（Delete） 　| 削除時に「本当に削除しますか？」と確認ダイアログを表示。「はい」で削除、「いいえ」でキャンセル。 |
-
 
 ---
 
@@ -222,7 +225,6 @@ https://github.com/user-attachments/assets/16c53501-2e3a-4576-ac61-a68c3c2b31bf
 ### 4. **UX向上のためのメッセージ表示**
 - 新規ライブ登録時に **「ライブを作成しました！」** と表示。  
 - `Material-UI` の `Alert` コンポーネントで、直感的なUIを提供。
-
 
 ##  **反省点**
 
