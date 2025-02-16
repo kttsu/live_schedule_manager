@@ -10,7 +10,7 @@ const Header = () => {
           sx={{
             display: "flex",
             alignItems: "center",
-            gap: 2, // 要素間の隙間（8px = 1 * theme.spacing(2)）
+            gap: 2, 
           }}
         >
           <Typography variant="h6" sx={{ textAlign: "left" }}>
