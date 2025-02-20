@@ -6,15 +6,12 @@ import { Box, Typography, TextField, Button } from "@mui/material";
 const UpdateLive = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-
-  // ユーザーが編集中のデータ
   const [live, setLive] = useState({
     schedule: "",
     name: "",
     location: "",
   });
 
-  // 初期ロード時の「オリジナル」データを保存するためのステート
   const [originalLive, setOriginalLive] = useState(null);
 
   useEffect(() => {
@@ -22,31 +19,25 @@ const UpdateLive = () => {
       const lives = await fetchLives();
       const liveToUpdate = lives.find((item) => item.id.toString() === id);
       if (liveToUpdate) {
-        // 編集用データをセット
         setLive(liveToUpdate);
-        // オリジナルデータを保持
         setOriginalLive(liveToUpdate);
       }
     };
     loadLive();
   }, [id]);
 
-  // 入力変更ハンドラ
   const handleChange = (e) => {
     setLive({ ...live, [e.target.name]: e.target.value });
   };
 
-  // 送信ハンドラ
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1. originalLive と live が同じかチェック
     if (originalLive && JSON.stringify(originalLive) === JSON.stringify(live)) {
       alert("前回と同じ情報です！");
-      return; // 更新リクエストをスキップ
+      return; 
     }
 
-    // 2. 変更がある場合は更新処理
     try {
       await updateLive(id, live);
       alert("ライブ情報を更新しました！");
@@ -92,6 +83,15 @@ const UpdateLive = () => {
           }}
         >
           <TextField
+            label="ライブ名"
+            variant="outlined"
+            name="name"
+            value={live.name}
+            onChange={handleChange}
+            required
+          />
+              
+          <TextField
             label="日時"
             type="datetime-local"
             variant="outlined"
@@ -100,15 +100,6 @@ const UpdateLive = () => {
             onChange={handleChange}
             required
             InputLabelProps={{ shrink: true }}
-          />
-
-          <TextField
-            label="ライブ名"
-            variant="outlined"
-            name="name"
-            value={live.name}
-            onChange={handleChange}
-            required
           />
 
           <TextField
