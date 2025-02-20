@@ -185,22 +185,22 @@ CIパイプライン中に発生した失敗結果とテストに合格する際
 | ライブ登録（Create） 　| 日時・ライブ名・会場を登録可能。登録後は日付順に自動ソートされ、「ライブを作成しました！」と表示。 |
 | ライブ一覧（Read） 　　| 登録されたライブを日時順に表示し、UIは見やすいリスト形式で一覧化。 |
 | ライブ更新（Update） 　| 登録済みのライブを選択し、日時・名称・会場を変更可能。同じ内容で更新時は「前回と同じ情報です！」と表示。 |
-| ライブ削除（Delete） 　| 削除時に「本当に削除しますか？」と確認ダイアログを表示。「はい」で削除、「いいえ」でキャンセル。 |
+| ライブ削除（Delete） 　| 削除時に「本当に削除しますか？」と確認ダイアログを表示。「はい」で削除、「いいえ」でキャンセル。削除を選択後、「ライブを削除しました！」と表示。 |
 
 ---
 
 ## 動作確認
 #### ライブ登録
-https://github.com/user-attachments/assets/9d8a7765-d4dd-40bb-bc56-65b617fe7f99
+https://github.com/user-attachments/assets/b6e8d92a-12a4-4244-a977-4acf850a7d48
 
 #### ライブ一覧表示
-![Image](https://github.com/user-attachments/assets/0a6c8f2d-d2f3-4a0b-9b87-377e786acfd5)
+![Image](https://github.com/user-attachments/assets/867ec262-61ec-4008-8c88-075fb4c2b33d)
 
 #### ライブ情報更新
-https://github.com/user-attachments/assets/492be25f-9f79-407e-88f9-9980e2b7a30a
+https://github.com/user-attachments/assets/a8cd7f7b-3f2d-4dbc-852c-2e28959f7471
 
 #### ライブ削除
-https://github.com/user-attachments/assets/a3e7ce9e-64ac-44af-95b8-7b30cf8fb784
+https://github.com/user-attachments/assets/c935aa7d-9271-47db-9245-1b3fea0f8154
 
 #### テキストフィールド未入力対策
 https://github.com/user-attachments/assets/16c53501-2e3a-4576-ac61-a68c3c2b31bf
