@@ -15,9 +15,7 @@ const CreateLive = () => {
     try {
       await createLive(newLive);
       window.alert("ライブを作成しました！");
-      setTimeout(() => {
         navigate("/");
-      }, 1000);
     } catch (error) {
       console.error("作成エラー:", error);
       window.alert("作成に失敗しました。");
