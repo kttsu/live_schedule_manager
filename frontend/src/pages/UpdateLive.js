@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { fetchLives, updateLive } from "../services/api";
+import { fetchLives, updateLive } from "../api/liveApi";
 import { Box, Typography, TextField, Button } from "@mui/material";
 
-const UpdateLive = () => {
+export function UpdateLive() {
   const { id } = useParams();
   const navigate = useNavigate();
+
   const [live, setLive] = useState({
     schedule: "",
     name: "",
@@ -90,7 +91,7 @@ const UpdateLive = () => {
             onChange={handleChange}
             required
           />
-              
+
           <TextField
             label="日時"
             type="datetime-local"
@@ -119,6 +120,4 @@ const UpdateLive = () => {
     </Box>
   );
 };
-
-export default UpdateLive;
 

@@ -9,22 +9,19 @@ import {
   DialogActions
 } from "@mui/material";
 
-const LiveItem = ({ live, onDelete }) => {
+export function LiveItem({ live, onDelete }) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
-  // 「削除」ボタンを押したらダイアログを開く
   const handleDeleteClick = () => {
     setOpen(true);
   };
 
-  // 「はい」を選択した場合 → 削除実行
   const handleConfirmYes = () => {
     onDelete(live.id);
     setOpen(false);
   };
 
-  // 「いいえ」を選択した場合 → ダイアログ閉じて一覧へ
   const handleConfirmNo = () => {
     setOpen(false);
     navigate("/");
@@ -71,5 +68,4 @@ const LiveItem = ({ live, onDelete }) => {
   );
 };
 
-export default LiveItem;
 

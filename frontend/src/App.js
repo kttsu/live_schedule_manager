@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
-import LiveList from "./pages/LiveList";
-import CreateLive from "./pages/CreateLive";
-import UpdateLive from "./pages/UpdateLive";
+import { LiveList } from "./pages/LiveList"; 
+import { CreateLive } from "./pages/CreateLive";
+import { UpdateLive } from "./pages/UpdateLive";
 
-function App() {
+export function App() {
   return (
     <Router>
       <AppBar position="static">
@@ -33,6 +33,4 @@ function App() {
     </Router>
   );
 }
-
-export default App;
 

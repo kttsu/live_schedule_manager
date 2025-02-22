@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { createLive } from "../services/api";
+import { createLive } from "../api/liveApi";
 import { useNavigate } from "react-router-dom";
 import { Box, TextField, Button, Typography } from "@mui/material";
 
-const CreateLive = () => {
+export function CreateLive() {
   const [schedule, setSchedule] = useState("");
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
@@ -15,13 +15,13 @@ const CreateLive = () => {
     try {
       await createLive(newLive);
       window.alert("ライブを作成しました！");
-        navigate("/");
+      navigate("/");
     } catch (error) {
       console.error("作成エラー:", error);
       window.alert("作成に失敗しました。");
     }
   };
-
+  
   return (
     <Box
       sx={{
@@ -97,6 +97,4 @@ const CreateLive = () => {
     </Box>
   );
 };
-
-export default CreateLive;
 

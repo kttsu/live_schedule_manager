@@ -1,8 +1,7 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
-const Header = () => {
+export function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
@@ -28,6 +27,4 @@ const Header = () => {
     </AppBar>
   );
 };
-
-export default Header;
 

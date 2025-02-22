@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchLives, deleteLive } from "../services/api";
+import { fetchLives, deleteLive } from "../api/liveApi";
 import {
   Table,
   TableBody,
@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const LiveList = () => {
+export function LiveList() {
   const [lives, setLives] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
@@ -131,6 +131,4 @@ const LiveList = () => {
     </div>
   );
 };
-
-export default LiveList;
 
